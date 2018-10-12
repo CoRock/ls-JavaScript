@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	function calc() {
+		// document.getElementById("TAG_ID")
+		var x = document.getElementById("x").value;
+		// entered value to tag's id is y
+		var y = document.getElementById("y").value;
+
+		x = parseInt(x);
+		y = parseInt(y);
+
+		var sum = x + y;
+		document.getElementById("sum").value = sum;
+	}
+</script>
+
+</head>
+<body>
+
+<form>
+	The first integer: <input id="x"><br>
+	The second integer: <input id="y"><br>
+	Total: <input id="sum"><br>
+	<input type="button" value="Calculation" onclick="calc()">
+</form>
+
+</body>
+</html>
