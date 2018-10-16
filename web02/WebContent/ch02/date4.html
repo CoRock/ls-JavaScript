@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="clock"></div>
+<script>
+	function setClock() {
+		var now = new Date();		// 현재 시각
+		// getFullYear(): 4자리 연도, getMonth(): 월(+ 1을 해야 함)
+		var s = "<span style='color: blue;'>"
+				+ now.getFullYear() + "-" + (now.getMonth() + 1) +"-"
+				+ now.getDate() + " " + now.getHours() + ":"
+				+ now.getMinutes() + ":" + now.getSeconds();
+				
+		// 태그.innerHTML: 태그 태부 영역에 html 출력
+		// 태그.innerText: 태그 내부 영역에 텍스트 출력
+		// document.getElementById("clock").innerText = s;
+		document.getElementById("clock").innerHTML = s;
+	}
+	
+	// setInterval("반복할 함수", 실행(호출) 간격): 타이머 설정
+	// setInterval("setClock()", 1000);	// 반복 호출
+	setTimeout("setClock()", 1000);		// 1회만 호출
+</script>
+
+</body>
+</html>
