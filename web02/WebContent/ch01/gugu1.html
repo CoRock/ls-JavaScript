@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+/*
+	var dan = prompt("단을 입력하세요", "3");
+	for (var i = 1; i <= 9; i++) {
+		document.write(dan + "x" + i + "=" + dan * i + "<br>");
+	}
+*/
+	function gugu() {
+		// document.getElementById("태그의id")
+		var dan = document.getElementById("dan").value;
+		var str = "";
+		for (var i = 1; i <= 9; i++) {
+			str += dan + "x" + i + "=" + dan * i + "<br>";
+		}
+		// TAG.innerHTML: <TAG>innerHTML Block</TAG>
+		// cf. innerText: ignore tag
+		document.getElementById("result").innerHTML = str;
+	}
+</script>
+
+</head>
+<body>
+
+<input type="text" id="dan" value="3" size="5">
+<input type="button" value="Confirm" onclick="gugu()">
+<div id="result">innerHTML Block</div>
+
+</body>
+</html>
