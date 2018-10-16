@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	var fruits = new Array();	// 배열 선언(가변 사이즈 배열)
+	document.write(typeof(fruits) + "<br>");
+	
+	fruits["0"] = "Apple";			// 배열참조변수[인덱스]
+	fruits["1"] = "Banana";
+	fruits["2"] = "Orange";
+	// var fruits = ["Apple", "Banana", "Orange"];
+	// if index is number
+	for (i = 0; i < fruits.length; i++) {
+		document.write(fruits[i] + "<br>");
+	}
+
+	// 숫자 인덱스 대신 문자열 인덱스를 사용할 경우
+	var fruits2 = new Array();
+	
+	fruits2["a"] = "Apple";
+	fruits2["b"] = "Banana";
+	fruits2["c"] = "Orange";
+	
+	document.write(fruits2["a"] + "<br>");
+	document.write(fruits2["b"] + "<br>");
+	document.write(fruits2["c"] + "<br>");
+	
+	// 인덱스 in 배열참조변수: 배열의 인덱스값을 조회
+	for (var key in fruits2) {		// f에는 index만 넘어옴
+		document.write(fruits2[key] + "<br>");
+	}
+</script>
+
+</head>
+<body>
+</body>
+</html>

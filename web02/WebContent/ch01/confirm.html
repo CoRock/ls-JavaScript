@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	var user = confirm("Do you want to continue?");
+	document.write(typeof(user) + "<br>");
+	document.write(user + "<br>");
+	// alert(user);
+	
+	// if confirm button was clicked
+	if (user == true) {
+		document.write("Confirm button was clicked.");
+	} else {	// if cancel button was clicked
+		document.write("Cancel button was clicked.");
+	}
+</script>
+
+</head>
+<body>
+
+<!-- 
+	alert("MESSAGE"): 단순 경고창
+	prompt("MESSAGE", "DEFAULT_VALUE"): 입력 대화상자
+	confirm("MESSAGE"): 사용자의 확인을 받는 대화상자
+		확인 -> true, 취소 -> false
+-->
+
+</body>
+</html>
