@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	str = "Java Program, Like father, like son.";
+	
+	// 문자열.match( /정규표현식/옵션 ): 일치하는 내용들을 찾음
+	// i : intensive(대소문자 구분 없이 검사), g : global(전역 검사)
+	result = str.match(/Like/ig);
+	document.write(result + "<br>");
+	
+	result = str.replace("Java", "JavaScript");
+	document.write(result + "<br>");
+	
+	str = "one two three four five";
+	// 배열 = 문자열.split("구분자"), 구분자를 기준으로 배열 생성
+	array = str.split(" ");
+	document.write(typeof(array) + "<br>");
+	document.write("The length of an Array: " + array.length + "<br>");
+	document.write(array + "<br>");
+	
+	// s에 배열 인덱스가 복사됨
+	for (var s in array) {
+		document.write(s + ": " + array[s] + "<br>");
+	}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
