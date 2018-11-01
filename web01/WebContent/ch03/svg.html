@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 래스터 이미지 파일 -->
+<!-- <img src="images/muffin.png"> -->
+
+<!-- 벡터 그래픽 파일 -->
+<img src="images/muffin.svg">
+
+<!--
+	벡터 이미지
+		xml ns: namespace (태그의 규격에 대한 설명)
+		rgb(red, green, blue): 빛의 3원색; 0~255
+		cx, cy: 원점의 x, y좌표 | r: 반지름 | stroke: 테두리 색상
+		stroke-width: 테두리 사이즈 | fill: 색상을 채움
+ -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+		style="width: 500px; height: 500px; background: yellow">
+	<circle cx="100" cy="100" r="50" stroke="pink" stroke-width="3" fill="blue" />
+	<rect width="300px" height="100px" x="100" y="300"
+			style="fill: rgb(0, 0, 0); stroke-width: 3; stroke: blue;" />
+</svg>
+ 
+</body>
+</html>
