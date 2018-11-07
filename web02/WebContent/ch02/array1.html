@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	function printArray(a) {
+		// 배열변수.length: 요소의 개수
+		for (i = 0; i < a.length; i++) {
+			// cmp. 배열변수[인덱스]
+			document.write(a[i] + " ");
+		}
+		document.write("<br>");
+	}
+/*	
+	var myArray0 = new Array();
+	myArray0[0] = "Apple";
+	myArray0[1] = "Banana";
+	myArray0[2] = "Orange";
+	
+	var myArray1 = [ "Apple", "Banana", "Orange" ];
+	
+	var myArray2 = new Array("Apple", "Banana", "Orange");
+*/
+	var myArray0 = new Array();
+	myArray0[0] = [ "Apple1", "Banana1", "Orange1" ];
+	myArray0[1] = [ "Apple2", "Banana2", "Orange2" ];
+	myArray0[2] = [ "Apple3", "Banana3", "Orange3" ];
+	
+	// typeof(변수): 변수의 자료형
+	console.log(typeof(myArray0));
+	
+	// 2차원 배열의 경우
+	var myArray1 = [
+		[ "Apple1", "Banana1", "Orange1" ],
+		[ "Apple2", "Banana2", "Orange2" ],
+		[ "Apple3", "Banana3", "Orange3" ]
+	];
+	
+	document.write("<h2>Two Dimensional Arrays</h2>");
+	for (i = 0; i < myArray1.length; i++) {
+		for (j = 0; j < myArray1[i].length; j++) {
+			document.write(myArray1[i][j] + "<br>");
+		}
+		document.write("<br>");
+	}
+	
+	var myArray2 = new Array("Apple", "Banana", "Orange");
+	
+	document.write("<h2>function call printArray(args)</h2>")
+	printArray(myArray0);
+	printArray(myArray1);
+	printArray(myArray2);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
