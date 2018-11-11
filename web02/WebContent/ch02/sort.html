@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	var myArray = [ 10, 100, 88, 77, 99, 200 ];
+	// var myArray = [ "Banana", "Grape", "Apple", "Watermelon", "Raisin" ];
+	
+	myArray.sort();	// 정렬(기본적으로 문자열 기준으로 정렬됨)
+	document.write("문자열 기준: " + myArray + "<br>");
+	
+	// 숫자 기준으로 정렬하려면 sort() 함수를 변경해야 함
+	/*
+		return a - b
+		a - b < 0	음수(a가 작다, 그대로)
+		a - b > 0	양수(a가 크다, 자리 바꿈)
+		a == b		(같다)
+	*/
+	myArray.sort( function(a, b) { return a - b; } );
+	document.write("Ascending Order: " + myArray + "<br>");
+	
+	myArray.sort( function(a, b) { return b - a; } );
+	document.write("Descending Order: " + myArray + "<br>");
+	
+	document.write(myArray + "<br>");
+	
+	var numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+	
+	// 인덱스 5번부터 끝까지 잘라냄
+	var newArray = numbers.slice(5);
+	document.write(newArray + "<br>");
+	
+	// 인덱스 5번부터 7번까지 잘라냄
+	// slice(start, end - 1);
+	var newArray2 = numbers.slice(5, 8);
+	document.write(newArray2 + "<br>");
+	
+	// join(): 배열을 하나의 문자열로 합침
+	var result = numbers.join(";");
+	document.write(typeof(result) + "<br>");
+	document.write(result + "<br>");
+	
+	// split(): 문자열을 나누어 배열로
+	var result2 = result.split(";");
+	document.write(typeof(result2) + "<br>");
+	document.write(result2);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
