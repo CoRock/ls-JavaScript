@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- for(변수 in 객체) -->
+<script>
+	// 사용자 정의 객체 생성
+	// { 변수명: 값, 함수: function() { } };
+	var myCar = {
+		maker: "BMW",
+		model: "320d",
+		year: 2013,
+		speed : 60,
+		speedDown: function() { this.speed -= 10; },
+		speedUp: function() { this.speed += 10; }
+	};
+	
+	// 멤버 호출 방법: 객체(참조변수)["변수명"]
+	myCar.speedUp();
+	document.write(myCar["speed"] + "<br>");
+	document.write(myCar["maker"] + "<br>");
+	document.write(myCar["model"] + "<br>");
+	document.write(myCar["year"] + "<br>");
+	document.write("<hr>");
+	
+	// or 객체(참조변수).변수명
+	document.write(myCar.speed + "<br>");
+	document.write(myCar.maker + "<br>");
+	document.write(myCar.model + "<br>");
+	document.write(myCar.year + "<br>");
+	document.write("<hr>");
+	
+	txt = "";
+	for (var x in myCar) {			// for (인덱스 변수 in 배열/객체)
+		txt += myCar[x] + " ";		// 객체[인덱스]
+	}
+	document.write(txt);
+</script>
+
+</head>
+<body>
+</body>
+</html>
