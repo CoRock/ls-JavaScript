@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<ul>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>	
+	<li>Item 5</li>
+</ul>
+<ul>
+	<li>Item 6</li>
+	<li>Item 7</li>
+	<li>Item 8</li>
+	<li>Item 9</li>	
+	<li>Item 10</li>
+</ul>
+
+<script>
+	// getElementsByTagName("태그"): 태그를 모두 찾음
+	var list = document.getElementsByTagName("ul")[0];		// 첫번째 태그
+	// ul 태그의 자식 태그 중에서 모든 li 태그들을 선택(배열로 저장됨)
+	var allItems = list.getElementsByTagName("li");
+	
+	alert(allItems.length);
+	for (i = 0; i < allItems.length; i++) {
+		// firstChild 첫번째 자식 태그, 태그.data: 태그의 내용
+		// alert(allItems[i].firstChild);
+		alert(allItems[i].firstChild.data);
+	}
+</script>
+
+</body>
+</html>
