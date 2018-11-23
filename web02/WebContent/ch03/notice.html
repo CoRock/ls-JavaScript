@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Window Object</title>
+
+<style type="text/css">
+	/* 모든 태그의 내외부 여백을 0으로 */
+	* {
+		margin: 0;
+		padding: 0;
+	}
+</style>
+
+</head>
+<body>
+
+<p>
+	<!-- #이미지맵의 name -->
+	<img src="../images/book.jpg" usemap="#intro" alt="신간 책 소개">
+	<map name="intro" id="intro">
+		<area shape="rect" coords="230, 368, 280, 390" href="#" alt="창 닫기" onclick="window.close();">
+	</map>
+</p>
+
+</body>
+</html>
