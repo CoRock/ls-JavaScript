@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	/**
+		타이머 설정
+			setTimeout("함수이름", 호출시간)
+		1회만 실행됨
+		반복 호출을 위해서는 재귀 호출 사용
+			setInterval()	반복 호출
+	*/
+	var timer;		// 전역 변수
+	
+	function test() {
+		// alert("test 함수 호출...");
+		console.log("함수 호출");	// 개발자 도구(F12)의 콘솔창에 출력됨
+		// timer = setTimeout("test()", 1000);
+	}
+	function showAlert() {
+		// setTimeout("test()", 1000);
+		timer = setInterval("test()", 1000);
+	}
+	function stopAlert() {
+		// clearTimeout(timer);		// 타이머를 초기화시킴
+		clearInterval(timer);
+	}
+</script>
+
+</head>
+<body>
+
+<p>버튼을 누르세요</p>
+<button onclick="showAlert()">타이머 시작</button>
+<button onclick="stopAlert()">타이머 멈춤</button>
+
+</body>
+</html>
