@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선형 그라데이션</title>
+
+<style>
+	div {
+		width: 500px;
+		height: 300px;
+		border-radius: 10px;
+	}
+	
+	.grad {	/* 선형 그레디언트 45도 각도, 시작색상, 종료색상 */
+		background: #ff0000;		/* CSS3 미지원 브라우저 */
+		background: -webkit-linear-gradient(45deg, #ff0000, #ffffff);		/* Chrome */
+		background: -moz-linear-gradient(45deg, #ff0000, #ffffff);		/* Firefox */
+		background: -o-linear-gradient(45deg, #ff0000, #ffffff);			/* Opera */
+		background: linear-gradient(45deg, #ff0000, #ffffff);					/* The latest Browser */
+	}
+</style>
+
+</head>
+<body>
+
+<div class="grad"></div>
+
+</body>
+</html>
